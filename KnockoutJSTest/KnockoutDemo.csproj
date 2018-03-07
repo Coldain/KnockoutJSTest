@@ -8,12 +8,36 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\components\battles\battles.ts" />
+    <None Remove="ClientApp\components\campaigns\campaigns.ts" />
+    <None Remove="ClientApp\components\characters\characters.ts" />
+    <None Remove="ClientApp\components\communities\communities.ts" />
+    <None Remove="ClientApp\components\events\events.ts" />
+    <None Remove="ClientApp\components\parties\parties.ts" />
+    <None Remove="ClientApp\components\profile\profile.ts" />
+    <None Remove="ClientApp\components\timelines\timelines.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Firebase.js" Version="2.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="WebEssentials.AspNetCore.PWA" Version="1.0.33" />
+    <PackageReference Include="WebIcons" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\components\battles\battles.ts" />
+    <TypeScriptCompile Include="ClientApp\components\campaigns\campaigns.ts" />
+    <TypeScriptCompile Include="ClientApp\components\characters\characters.ts" />
+    <TypeScriptCompile Include="ClientApp\components\communities\communities.ts" />
+    <TypeScriptCompile Include="ClientApp\components\events\events.ts" />
+    <TypeScriptCompile Include="ClientApp\components\parties\parties.ts" />
+    <TypeScriptCompile Include="ClientApp\components\profile\profile.ts" />
+    <TypeScriptCompile Include="ClientApp\components\timelines\timelines.ts" />
   </ItemGroup>
 
   <Target Name="DebugRunWebpack" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('wwwroot\dist') ">

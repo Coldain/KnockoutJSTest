@@ -5,9 +5,17 @@ import navMenu from '../nav-menu/nav-menu';
 
 // Declare the client-side routing configuration
 const routes: Route[] = [
-    { url: '',              params: { page: 'home-page' } },
-    { url: 'counter',       params: { page: 'counter-example' } },
-    { url: 'fetch-data',    params: { page: 'fetch-data' } }
+    { url: '', params: { page: 'home-page' } },
+    { url: 'profile', params: { page: 'profile' } },
+    { url: 'characters', params: { page: 'characters' } },
+    { url: 'parties', params: { page: 'parties' } },
+    { url: 'battles', params: { page: 'battles' } },
+    { url: 'campaigns', params: { page: 'campaigns' } },
+    { url: 'events', params: { page: 'events' } },
+    { url: 'communities', params: { page: 'communities' } },
+    { url: 'timelines', params: { page: 'timelines' } },
+    { url: 'counter', params: { page: 'counter-example' } },
+    { url: 'fetch-data', params: { page: 'fetch-data' } }
 ];
 
 class AppRootViewModel {
@@ -25,6 +33,14 @@ class AppRootViewModel {
         // For docs, see https://github.com/webpack/bundle-loader
         ko.components.register('nav-menu', navMenu);
         ko.components.register('home-page', require('bundle-loader?lazy!../home-page/home-page'));
+        ko.components.register('profile', require('bundle-loader?lazy!../profile/profile'));
+        ko.components.register('characters', require('bundle-loader?lazy!../characters/characters'));
+        ko.components.register('parties', require('bundle-loader?lazy!../parties/parties'));
+        ko.components.register('battles', require('bundle-loader?lazy!../battles/battles'));
+        ko.components.register('campaigns', require('bundle-loader?lazy!../campaigns/campaigns'));
+        ko.components.register('events', require('bundle-loader?lazy!../events/events'));
+        ko.components.register('communities', require('bundle-loader?lazy!../communities/communities'));
+        ko.components.register('timelines', require('bundle-loader?lazy!../timelines/timelines'));
         ko.components.register('counter-example', require('bundle-loader?lazy!../counter-example/counter-example'));
         ko.components.register('fetch-data', require('bundle-loader?lazy!../fetch-data/fetch-data'));
     }
